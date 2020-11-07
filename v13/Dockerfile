@@ -5,6 +5,7 @@ MAINTAINER Nico Swiatecki
 ENV NIGHTSCOUT_VERSION="13.0.1"
 
 RUN apk --update add ca-certificates wget && \
+    apk --update add --no-cache --virtual .gyp python make g++ && \
     update-ca-certificates && \
     mkdir -p /opt/app
 
