@@ -2,7 +2,7 @@ FROM node:14.15.3-alpine
 
 MAINTAINER Nico Swiatecki
 
-ENV NIGHTSCOUT_VERSION="14.2.0"
+ENV NIGHTSCOUT_VERSION="14.2.1"
 
 RUN apk --update add ca-certificates wget && \
     update-ca-certificates && \
