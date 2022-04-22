@@ -2,7 +2,7 @@ FROM node:14.15.3-alpine
 
 MAINTAINER Nico Swiatecki
 
-ENV NIGHTSCOUT_VERSION="14.2.2"
+ENV NIGHTSCOUT_VERSION="14.2.3"
 
 RUN apk --update add ca-certificates wget && \
     update-ca-certificates && \
@@ -19,8 +19,7 @@ RUN mkdir -p /.temp && \
 USER node
 RUN npm install && \
     npm run postinstall && \
-    npm run env && \
-    npm audit fix
+    npm run env
 
 EXPOSE 1337
 
